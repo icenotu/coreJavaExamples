@@ -1,6 +1,7 @@
 package ch03;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class LotteryDrawing {
@@ -21,20 +22,21 @@ public class LotteryDrawing {
 
         // draw k numbers and put them into a second array
         int[] result = new int[k];
+        Random rand = new Random();
         for (int i = 0; i < result.length; i++) {
             // make a random index between 0 and n-1
-            int r = (int) (Math.random() * n);
-
+//            int r = (int) (Math.random() * n);
+            int r = rand.nextInt(n);
             // pick the element at the random location
             result[i] = numbers[r];
 
             //move the last element into the random location;
-            numbers[i] = numbers[n - 1];
+            numbers[r] = numbers[n - 1];
             n--;
         }
 
         //print the sorted array
-        Arrays.sort(result);
+//        Arrays.sort(result);
         System.out.println("Bet the following combination. It'll make you rich");
         System.out.println(Arrays.toString(result));
     }
