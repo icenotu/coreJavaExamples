@@ -16,5 +16,9 @@ public class ArrayCopy {
         arr1[3] = 33;
         System.out.println(arr3[3]);
         System.out.println(arr1[3]);
+        System.out.println(Arrays.equals(arr1,arr2));
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
+        System.out.println(Arrays.toString(arr3));
     }
 }
