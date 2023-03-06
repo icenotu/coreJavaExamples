@@ -2,6 +2,7 @@ package ch05;
 
 public class ManagerTest {
     public static void main(String[] args) {
+
         //construct a Manager object
         var boss = new Manager("Carl Cracker", 80000, 1987, 12, 15);
         boss.setBonus(5000);
@@ -15,5 +16,11 @@ public class ManagerTest {
         //print out information about all Employee objects
         for (Employee e : staff)
             System.out.println("name=" + e.getName() + ", salary=" + e.getSalary());
+
+        Manager[] managers = new Manager[3];
+        Employee[] employees = managers;
+        employees[0] = new Employee("Carl Cracker", 80000, 1987, 12, 15);
+//        managers[0].setBonus(5000);
+//        System.out.println(managers[0]);
     }
 }
